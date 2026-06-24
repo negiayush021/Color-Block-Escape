@@ -17,6 +17,7 @@ public class GridManager : MonoBehaviour
     {
         instance = this;
         GenerateGrid();
+        RegisterGates();
         SpawnBlocks();
     }
 
@@ -63,6 +64,18 @@ public class GridManager : MonoBehaviour
         return !cell.isOccupied;
     }
 
+    private void RegisterGates()
+    {
+        foreach (var gate in currentLevel.gates)
+        {
+            GridCell cell = GetCell(
+                gate.position.x,
+                gate.position.y);
+
+            cell.cellType = CellType.Exit;
+            cell.ExitColor = gate.gateColor;
+        }
+    }
     private void SpawnBlocks()
     {
         foreach (var block in currentLevel.blocks)

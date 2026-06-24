@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdb8a024145fd0e4b955a0b8d5674326, type: 3}
-  m_Name: Green Block
+  m_Name: Obstacle
   m_EditorClassIdentifier: Assembly-CSharp::BlockData
-  BlockName: Green Block
-  blockType: 0
-  BlockPrefab: {fileID: 4471837368860176564, guid: c42b9b835876a3f45aa99056c7221b4a, type: 3}
-  blockColor: 2
+  BlockName: Obstacle
+  blockType: 2
+  BlockPrefab: {fileID: 1796982438711535643, guid: fffdeaf71eede6847a212e2d897648dc, type: 3}
+  blockColor: 4

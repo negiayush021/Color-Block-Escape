@@ -8,4 +8,5 @@ public class LevelData : ScriptableObject
     public int moveLimit;
 
     public BlockSpawnData[] blocks;
+    public GateSpawnData[] gates;
 }

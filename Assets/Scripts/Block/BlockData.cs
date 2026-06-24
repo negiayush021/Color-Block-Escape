@@ -12,6 +12,6 @@ public class BlockData : ScriptableObject
 {
     public string BlockName;
     public BlockType blockType;
-    public Color color;
     public GameObject BlockPrefab;
+    public BlockColor blockColor;
 }

@@ -3,6 +3,17 @@ using System.Collections;
 using UnityEngine;
 using static UnityEditor.Progress;
 
+
+public enum BlockColor
+{
+    Red,
+    Blue,
+    Green,
+    Yellow,
+    Grey,
+    GateColor
+}
+
 public class Block : MonoBehaviour
 {
     public BlockData blockData;
@@ -11,10 +22,6 @@ public class Block : MonoBehaviour
     private bool IsMoving = false;
     
 
-    private void Start()
-    {
-        GetComponent<Renderer>().material.color = blockData.color;
-    }
     public void Move(Vector2Int direction)
     {
         if (IsMoving) return;
@@ -45,11 +52,29 @@ public class Block : MonoBehaviour
             GridPosition.x,
             GridPosition.y);
 
+        if(targetCell.cellType == CellType.Exit)
+        {
+            print("Found Exit cell");
+            CheckExit(currentCell);
+        }
+
         currentCell.isOccupied = false;
         targetCell.isOccupied = true;
 
         GridPosition = targetPosition;
         StartCoroutine(Moving(GridPosition));
+    }
+
+    private void CheckExit(GridCell cell)
+    {
+        if (cell.ExitColor == blockData.blockColor)
+        {
+            Debug.Log("Block Escaped");
+
+            Destroy(gameObject);
+
+            //LevelManager.Instance.CheckLevelComplete();
+        }
     }
 
     IEnumerator Moving(Vector2Int GridPos)
