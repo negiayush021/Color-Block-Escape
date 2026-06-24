@@ -7,10 +7,14 @@ public class GridManager : MonoBehaviour
     [SerializeField] private int rows = 10;
     private float cellSize = 1f;
 
-    private GridCell[,] grid; 
+    private GridCell[,] grid;
 
+    [SerializeField] private GameObject Tile;
+
+    public static GridManager instance;
     private void Awake()
     {
+        instance = this;
         GenerateGrid();
     }
 
@@ -22,6 +26,7 @@ public class GridManager : MonoBehaviour
         {
             for (int y = 0; y < rows; y++)
             {
+                Instantiate(Tile, new Vector3(x, 0, y) , Quaternion.identity);
                 grid[x, y] = new GridCell(x, y);
             }
         }
