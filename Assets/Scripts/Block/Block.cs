@@ -11,7 +11,6 @@ public enum BlockColor
     Green,
     Yellow,
     Grey,
-    GateColor
 }
 
 public class Block : MonoBehaviour
@@ -55,13 +54,15 @@ public class Block : MonoBehaviour
         if(targetCell.cellType == CellType.Exit)
         {
             print("Found Exit cell");
-            CheckExit(currentCell);
+            CheckExit(targetCell);
         }
 
         currentCell.isOccupied = false;
         targetCell.isOccupied = true;
 
+        UndoManager.Instance.SaveState();
         GridPosition = targetPosition;
+
         StartCoroutine(Moving(GridPosition));
     }
 
@@ -71,10 +72,16 @@ public class Block : MonoBehaviour
         {
             Debug.Log("Block Escaped");
 
-            Destroy(gameObject);
+            StartCoroutine(Escaping());
 
             //LevelManager.Instance.CheckLevelComplete();
         }
+    }
+
+    IEnumerator Escaping()
+    {
+        yield return new WaitForSeconds(1);
+        gameObject.SetActive(false);
     }
 
     IEnumerator Moving(Vector2Int GridPos)
