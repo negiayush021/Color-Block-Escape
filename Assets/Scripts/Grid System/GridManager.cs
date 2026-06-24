@@ -3,13 +3,14 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
     [Header("Grid Settings")]
-    [SerializeField] private int columns = 10;
-    [SerializeField] private int rows = 10;
+
+    [SerializeField] private LevelData currentLevel;
     private float cellSize = 1f;
 
     private GridCell[,] grid;
 
     [SerializeField] private GameObject Tile;
+    
 
     public static GridManager instance;
     private void Awake()
@@ -20,23 +21,23 @@ public class GridManager : MonoBehaviour
 
     private void GenerateGrid()
     {
-        grid = new GridCell[columns, rows];
+        grid = new GridCell[currentLevel.columns, currentLevel.rows];
 
-        for (int x = 0; x < columns; x++)
+        for (int x = 0; x < currentLevel.columns; x++)
         {
-            for (int y = 0; y < rows; y++)
+            for (int y = 0; y < currentLevel.rows; y++)
             {
-                Instantiate(Tile, new Vector3(x, 0, y) , Quaternion.identity);
+                Instantiate(Tile, new Vector3( x, 0, y) , Quaternion.identity , transform);
                 grid[x, y] = new GridCell(x, y);
             }
         }
 
-        Debug.Log($"Grid created: {columns}x{rows}");
+        Debug.Log($"Grid created: {currentLevel.columns}x{currentLevel.rows}");
     }
 
     public Vector3 GetWorldPosition(int x, int y)
     {
-        return new Vector3(x, 0, y) * cellSize + transform.position;
+        return new Vector3( x, 0,  y) * cellSize + transform.position;
     }
 
     public Vector2Int GetGridposition(Vector3 worldPos)
@@ -48,7 +49,7 @@ public class GridManager : MonoBehaviour
 
     public GridCell GetCell(int x, int y)
     {
-        if (x >= 0 && x < columns && y >= 0 && y < rows)
+        if (x >= 0 && x < currentLevel.columns && y >= 0 && y < currentLevel.rows)
             return grid[x, y];
         return null; // out of bounds
     }
@@ -60,4 +61,5 @@ public class GridManager : MonoBehaviour
 
         return !cell.isOccupied;
     }
+
 }
