@@ -17,6 +17,7 @@ public class GridManager : MonoBehaviour
     {
         instance = this;
         GenerateGrid();
+        SpawnBlocks();
     }
 
     private void GenerateGrid()
@@ -60,6 +61,30 @@ public class GridManager : MonoBehaviour
         if (cell == null) return false;
 
         return !cell.isOccupied;
+    }
+
+    private void SpawnBlocks()
+    {
+        foreach (var block in currentLevel.blocks)
+        {
+            Vector3 spawnPos = GetWorldPosition(
+                block.position.x,
+                block.position.y);
+
+            GameObject blockObj = Instantiate(
+                block.blockData.BlockPrefab,
+                spawnPos,
+                Quaternion.identity);
+
+            Block blockScript = blockObj.GetComponent<Block>();
+
+            blockScript.GridPosition = block.position;
+
+            GetCell(
+                block.position.x,
+                block.position.y)
+                .isOccupied = true;
+        }
     }
 
 }

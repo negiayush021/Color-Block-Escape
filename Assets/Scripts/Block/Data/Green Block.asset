@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdb8a024145fd0e4b955a0b8d5674326, type: 3}
-  m_Name: Red Block
+  m_Name: Green Block
   m_EditorClassIdentifier: Assembly-CSharp::BlockData
-  BlockName: Red Block
+  BlockName: Green Block
   blockType: 0
-  color: {r: 1, g: 0, b: 0, a: 0}
-  BlockPrefab: {fileID: 1796982438711535643, guid: c94a3b3b611832047adef527a15674f6, type: 3}
+  color: {r: 0, g: 1, b: 0.2166667, a: 0}
+  BlockPrefab: {fileID: 4471837368860176564, guid: c42b9b835876a3f45aa99056c7221b4a, type: 3}
