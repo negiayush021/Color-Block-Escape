@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   columns: 8
   rows: 8
-  moveLimit: 20
+  moveLimit: 15
+  blocks: []
+  gates: []

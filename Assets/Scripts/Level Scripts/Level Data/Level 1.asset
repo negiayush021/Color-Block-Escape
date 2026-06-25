@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   columns: 6
   rows: 6
-  moveLimit: 10
+  moveLimit: 30
+  No_of_Blocks: 3
+  cameraPos: {x: 2.5, y: 35, z: -7}
   blocks:
   - blockData: {fileID: 11400000, guid: eb7f135bccd77304c98e71bc605a5ae4, type: 2}
     position: {x: 0, y: 1}
@@ -31,7 +33,7 @@ MonoBehaviour:
   gates:
   - gateColor: 0
     position: {x: 5, y: 0}
-  - gateColor: 2
-    position: {x: 5, y: 4}
   - gateColor: 1
     position: {x: 0, y: 3}
+  - gateColor: 2
+    position: {x: 5, y: 4}

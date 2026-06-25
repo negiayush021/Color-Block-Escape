@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using UnityEngine;
 
 public class GridManager : MonoBehaviour
@@ -5,6 +6,8 @@ public class GridManager : MonoBehaviour
     [Header("Grid Settings")]
 
     [SerializeField] private LevelData currentLevel;
+    [SerializeField] private Gate[] gatePrefabs;
+
     private float cellSize = 1f;
 
     private GridCell[,] grid;
@@ -16,9 +19,32 @@ public class GridManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        //GameManager.instance.OnLevelChangeBtnPressed += LevelChange;
+
+    }
+
+    private void Start()
+    {
+        currentLevel =
+        GameManager.instance.CurrentLevelData;
+
         GenerateGrid();
-        RegisterGates();
+        SpawnGates();
         SpawnBlocks();
+
+        GameManager.instance.OnLevelChangeBtnPressed += LevelChange;
+        GameManager.instance.OnRestartBtnPressed += Restart;
+    }
+
+    /*private void OnEnable()
+    {
+        GameManager.instance.OnLevelChangeBtnPressed += LevelChange;
+    }*/
+
+    private void OnDisable()
+    {
+        GameManager.instance.OnLevelChangeBtnPressed -= LevelChange;
+        GameManager.instance.OnRestartBtnPressed -= Restart;
     }
 
     private void GenerateGrid()
@@ -35,6 +61,16 @@ public class GridManager : MonoBehaviour
         }
 
         Debug.Log($"Grid created: {currentLevel.columns}x{currentLevel.rows}");
+    }
+
+    public void DestroyGrid()
+    {
+        foreach (Transform child in transform)
+        {
+            Destroy(child.gameObject);
+        }
+
+        grid = null;
     }
 
     public Vector3 GetWorldPosition(int x, int y)
@@ -64,18 +100,8 @@ public class GridManager : MonoBehaviour
         return !cell.isOccupied;
     }
 
-    private void RegisterGates()
-    {
-        foreach (var gate in currentLevel.gates)
-        {
-            GridCell cell = GetCell(
-                gate.position.x,
-                gate.position.y);
+    
 
-            cell.cellType = CellType.Exit;
-            cell.ExitColor = gate.gateColor;
-        }
-    }
     private void SpawnBlocks()
     {
         foreach (var block in currentLevel.blocks)
@@ -100,4 +126,99 @@ public class GridManager : MonoBehaviour
         }
     }
 
+    private void SpawnGates()
+    {
+        foreach (var gateData in currentLevel.gates)
+        {
+            Gate prefab = GetGatePrefab(gateData.gateColor);
+
+            Gate gate = Instantiate(
+                prefab,
+                GetWorldPosition(
+                    gateData.position.x,
+                    gateData.position.y),
+                Quaternion.identity);
+
+            gate.gateColor = gateData.gateColor;
+
+            GridCell cell = GetCell(
+                gateData.position.x,
+                gateData.position.y);
+
+            cell.cellType = CellType.Exit;
+            cell.ExitColor = gateData.gateColor;
+            cell.gateReference = gate;
+
+            if (gateData.position.x == 0)
+            {
+                gate.transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            else
+            {
+                if (gateData.position.x == currentLevel.rows - 1)
+                    continue;
+
+                if (gateData.position.y == currentLevel.columns-1)
+                {
+                    gate.transform.rotation = Quaternion.Euler(0, -90, 0);
+                }
+                else
+                {
+                    gate.transform.rotation = Quaternion.Euler(0, 90, 0);
+                }
+            }
+            
+        }
+    }
+
+    private Gate GetGatePrefab(BlockColor color)
+    {
+        foreach (var gate in gatePrefabs)
+        {
+            if (gate.gateColor == color)
+                return gate;
+        }
+
+        Debug.LogError($"No gate prefab found for {color}");
+        return null;
+    }
+
+    private void LevelChange()
+    {
+        DestroyBlocks();
+        DestroyGrid();
+        currentLevel = GameManager.instance.CurrentLevelData;
+
+        GenerateGrid();
+        SpawnGates();
+        SpawnBlocks();
+    }
+
+    public void DestroyBlocks()
+    {
+        Block[] blocks = FindObjectsByType<Block>(FindObjectsSortMode.None);
+
+        foreach(Block block in blocks)
+        {
+            Destroy(block.gameObject);
+        }
+    }
+
+    private void Restart()
+    {
+        DestroyBlocks();
+        SpawnBlocks();
+        ClearGridOccupancy();
+
+    }
+    public void ClearGridOccupancy()
+    {
+        for (int x = 0; x < currentLevel.columns; x++)
+        {
+            for (int y = 0; y < currentLevel.rows; y++)
+            {
+                grid[x, y].isOccupied = false;
+            }
+        }
+    }
 }

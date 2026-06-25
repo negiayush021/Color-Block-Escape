@@ -1,5 +1,6 @@
 using Solo.MOST_IN_ONE;
 using System.Collections;
+using Unity.Multiplayer.PlayMode;
 using UnityEngine;
 using static UnityEditor.Progress;
 
@@ -51,14 +52,15 @@ public class Block : MonoBehaviour
             GridPosition.x,
             GridPosition.y);
 
-        if(targetCell.cellType == CellType.Exit)
+        currentCell.isOccupied = false;
+        targetCell.isOccupied = true;
+
+        if (targetCell.cellType == CellType.Exit)
         {
             print("Found Exit cell");
             CheckExit(targetCell);
         }
 
-        currentCell.isOccupied = false;
-        targetCell.isOccupied = true;
 
         UndoManager.Instance.SaveState();
         LevelManager.Instance.UseMove();
@@ -71,18 +73,20 @@ public class Block : MonoBehaviour
     {
         if (cell.ExitColor == blockData.blockColor)
         {
+            cell.isOccupied = false;
             Debug.Log("Block Escaped");
-
+            cell.gateReference.OpenGate();
             StartCoroutine(Escaping());
-
-            //LevelManager.Instance.CheckLevelComplete();
+            LevelManager.Instance.DecreaseBlocksNumber();
+            
         }
     }
 
     IEnumerator Escaping()
     {
-        yield return new WaitForSeconds(1);
-        gameObject.SetActive(false);
+        yield return new WaitForSeconds(0.5f);
+        Destroy(gameObject);
+        LevelManager.Instance.CheckLevelComplete();
     }
 
     IEnumerator Moving(Vector2Int GridPos)
@@ -106,6 +110,7 @@ public class Block : MonoBehaviour
             yield return null;
         }
 
+        
         transform.position = targetPos;
         IsMoving = false;
 

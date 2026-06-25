@@ -13,6 +13,7 @@ public class GridCell
     public bool isOccupied;
     public CellType cellType;
     public BlockColor ExitColor;
+    public Gate gateReference;
 
     public GridCell(int x , int y)
     {

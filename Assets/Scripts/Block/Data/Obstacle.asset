@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BlockData
   BlockName: Obstacle
   blockType: 2
-  BlockPrefab: {fileID: 1796982438711535643, guid: fffdeaf71eede6847a212e2d897648dc, type: 3}
+  BlockPrefab: {fileID: 1529508772499210817, guid: 23299c74277afb942a986939f2707508, type: 3}
   blockColor: 4

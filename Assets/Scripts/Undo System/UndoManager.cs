@@ -11,6 +11,20 @@ public class UndoManager : MonoBehaviour
     {
         Instance = this;
     }
+    private void Start()
+    {
+        GameManager.instance.OnRestartBtnPressed += Restart;
+    }
+
+    /*private void OnEnable()
+    {
+        GameManager.instance.OnRestartBtnPressed += Restart;
+    }*/
+
+    private void OnDisable()
+    {
+        GameManager.instance.OnRestartBtnPressed -= Restart;
+    }
 
     public void SaveState()
     {
@@ -56,5 +70,10 @@ public class UndoManager : MonoBehaviour
                     blockState.position.y);
  
         }
+    }
+
+    private void Restart()
+    {
+        undoStack.Clear();
     }
 }

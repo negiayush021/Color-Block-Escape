@@ -12,6 +12,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c1020a01bf26d24aa46b47d22fa74d6, type: 3}
   m_Name: Level 2
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
-  columns: 8
-  rows: 8
+  columns: 4
+  rows: 4
   moveLimit: 20
+  No_of_Blocks: 4
+  cameraPos: {x: 1.5, y: 25, z: -5}
+  blocks:
+  - blockData: {fileID: 11400000, guid: eb7f135bccd77304c98e71bc605a5ae4, type: 2}
+    position: {x: 1, y: 0}
+  - blockData: {fileID: 11400000, guid: 554ce7e7eea89b14da66a28d65f20f6d, type: 2}
+    position: {x: 3, y: 0}
+  - blockData: {fileID: 11400000, guid: 554ce7e7eea89b14da66a28d65f20f6d, type: 2}
+    position: {x: 2, y: 3}
+  - blockData: {fileID: 11400000, guid: d62f131a1b9153e4686723e480507a4d, type: 2}
+    position: {x: 3, y: 1}
+  - blockData: {fileID: 11400000, guid: 59e77b793d9df2c42ac76fc57e7a9836, type: 2}
+    position: {x: 2, y: 1}
+  - blockData: {fileID: 11400000, guid: 59e77b793d9df2c42ac76fc57e7a9836, type: 2}
+    position: {x: 2, y: 2}
+  - blockData: {fileID: 11400000, guid: 59e77b793d9df2c42ac76fc57e7a9836, type: 2}
+    position: {x: 3, y: 3}
+  - blockData: {fileID: 11400000, guid: 59e77b793d9df2c42ac76fc57e7a9836, type: 2}
+    position: {x: 0, y: 2}
+  - blockData: {fileID: 11400000, guid: 59e77b793d9df2c42ac76fc57e7a9836, type: 2}
+    position: {x: 1, y: 3}
+  - blockData: {fileID: 11400000, guid: 59e77b793d9df2c42ac76fc57e7a9836, type: 2}
+    position: {x: 0, y: 0}
+  - blockData: {fileID: 11400000, guid: 59e77b793d9df2c42ac76fc57e7a9836, type: 2}
+    position: {x: 2, y: 0}
+  gates:
+  - gateColor: 0
+    position: {x: 3, y: 1}
+  - gateColor: 2
+    position: {x: 1, y: 3}
+  - gateColor: 1
+    position: {x: 0, y: 0}

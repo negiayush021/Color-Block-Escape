@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BlockData
   BlockName: Red Block
   blockType: 0
-  color: {r: 1, g: 0, b: 0, a: 0}
-  BlockPrefab: {fileID: 1796982438711535643, guid: c94a3b3b611832047adef527a15674f6, type: 3}
+  BlockPrefab: {fileID: 1529508772499210817, guid: 72ecbb6e5c834dc4dad8541bdf98ae37, type: 3}
+  blockColor: 0
