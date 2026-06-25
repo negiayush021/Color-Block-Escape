@@ -9,4 +9,18 @@ public class GameManager : MonoBehaviour
         QualitySettings.vSyncCount = 0;
         instance = this;
     }
+
+    [SerializeField] private GameObject settingsPage;
+    [SerializeField] private GameObject homePage;
+
+    public void OpenSettingsPage()
+    {
+        settingsPage.SetActive(true);
+    }
+
+    public void OpenHomePage()
+    {
+        homePage.SetActive(true);
+    }
+
 }
