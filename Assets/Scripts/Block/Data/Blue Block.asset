@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BlockData
   BlockName: Blue Block
   blockType: 0
-  color: {r: 0, g: 0.01666689, b: 1, a: 0}
   BlockPrefab: {fileID: 1529508772499210817, guid: c6273e1693821534688446f36ecf8683, type: 3}
+  blockColor: 1

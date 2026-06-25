@@ -61,6 +61,7 @@ public class Block : MonoBehaviour
         targetCell.isOccupied = true;
 
         UndoManager.Instance.SaveState();
+        LevelManager.Instance.UseMove();
         GridPosition = targetPosition;
 
         StartCoroutine(Moving(GridPosition));

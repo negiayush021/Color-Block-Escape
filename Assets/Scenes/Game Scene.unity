@@ -1115,6 +1115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2086055757}
+  - component: {fileID: 2086055758}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -1137,6 +1138,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2086055758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086055756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37ec025ef92eb19469953288c6bf64b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  MovesRemaining: 0
+  currentLevel: {fileID: 11400000, guid: 4a5a291d173fa134f807fafc4820c4fc, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

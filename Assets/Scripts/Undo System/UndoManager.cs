@@ -38,6 +38,7 @@ public class UndoManager : MonoBehaviour
             return;
 
         MoveState state = undoStack.Pop();
+        LevelManager.Instance.RestoreMove();
         print("Undo");
         foreach (var blockState in state.blockStates)
         {
