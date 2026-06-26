@@ -133,7 +133,7 @@ public class Block : MonoBehaviour
         if (GameManager.instance.hammer_disable_img.fillAmount <= 0 )
         {
             //Power active now
-            GameManager.instance.hammer_disable_img.enabled = false;
+            GameManager.instance.HammerBtn.enabled = true;
             GameManager.instance.hammerPowerCount += 1;
             GameManager.instance.hammerCount_txt.text = GameManager.instance.hammerPowerCount.ToString();
         }
@@ -141,8 +141,8 @@ public class Block : MonoBehaviour
         if (GameManager.instance.undo_disable_img.fillAmount <= 0 )
         {
             //undo active now
-            GameManager.instance.undo_disable_img.enabled = false;
-            GameManager.instance.undoCount += 2;
+            GameManager.instance.UndoBtn.enabled = true;
+            GameManager.instance.undoCount += 1;
             GameManager.instance.undoCount_txt.text = GameManager.instance.undoCount.ToString();
         }
         

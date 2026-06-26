@@ -84,7 +84,7 @@ public class UndoManager : MonoBehaviour
             blockState.block.gameObject.SetActive(blockState.isActive);
 
             
-            if (wasInactive && willBeActive)
+            if (wasInactive && willBeActive && blockState.block.tag != "Obstacle")
             {
                 LevelManager.Instance.IncreaseBlocksNumber();
             }

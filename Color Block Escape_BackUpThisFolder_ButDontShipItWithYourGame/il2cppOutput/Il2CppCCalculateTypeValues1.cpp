@@ -3275,7 +3275,7 @@ struct Managed_t7CB1B315B8E0E50EE8A2993B3E4CDF35E2B4909D  : public RuntimeObject
 struct SharedStatics_t1BB591F9E205BC35764C232444F95ED00379162D  : public RuntimeObject
 {
 };
-struct U3COpeningU3Ed__6_tF06E878DC35068E84C1359F94C178C9F84DE2D9E  : public RuntimeObject
+struct U3COpeningU3Ed__7_tD3406F3262D4BEA7296670FAD6F63456F5B9D1C4  : public RuntimeObject
 {
 	int32_t ___U3CU3E1__state;
 	RuntimeObject* ___U3CU3E2__current;
@@ -48016,7 +48016,7 @@ const Il2CppTypeDefinitionSizes g_typeDefinitionSize7450 = { sizeof(ThrowStub_tA
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize7451;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7451 = { sizeof(U3CModuleU3E_tBB65183F1134474D09FF49B95625D25472B9BA8B), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize7452;
-const Il2CppTypeDefinitionSizes g_typeDefinitionSize7452 = { sizeof(U3COpeningU3Ed__6_tF06E878DC35068E84C1359F94C178C9F84DE2D9E), -1, 0, 0 };
+const Il2CppTypeDefinitionSizes g_typeDefinitionSize7452 = { sizeof(U3COpeningU3Ed__7_tD3406F3262D4BEA7296670FAD6F63456F5B9D1C4), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize7453;
 const Il2CppTypeDefinitionSizes g_typeDefinitionSize7453 = { sizeof(ApplicationQuitter_tE88D55A9E8EC09EC939F0AD5802DAC8DC06077DE), -1, 0, 0 };
 IL2CPP_EXTERN_C_CONST Il2CppTypeDefinitionSizes g_typeDefinitionSize7454;

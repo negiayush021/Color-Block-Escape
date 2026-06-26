@@ -8,6 +8,11 @@ public class ApplicationQuitter : MonoBehaviour
 
     [SerializeField] private GameObject LevelsMenu;
     [SerializeField] private Image DarkPanel;
+
+    private void Start()
+    {
+        DarkPanel.gameObject.SetActive(false);
+    }
     public void ExitTheApplication()
     {
         Application.targetFrameRate = 60;
@@ -36,6 +41,7 @@ public class ApplicationQuitter : MonoBehaviour
 
     IEnumerator Opening()
     {
+        DarkPanel.gameObject.SetActive(true);
         for (float t = 0; t < 1; t += Time.deltaTime)
         {
             Color c = DarkPanel.color;

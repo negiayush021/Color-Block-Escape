@@ -85,18 +85,21 @@ public class GameManager : MonoBehaviour
         }
         Designs[currentLevel].SetActive(true);
         cameraTransform.position = CurrentLevelData.cameraPos;
+
         
     }
 
     IEnumerator startingTheGame()
     {
-        for(float t = 1; t> 0; t -= Time.deltaTime)
+        LoadingFadeIMG.gameObject.SetActive(true);
+        for (float t = 1; t> 0; t -= Time.deltaTime)
         {
             Color c = LoadingFadeIMG.color;
             c.a = t;
             LoadingFadeIMG.color = c;
             yield return null;
         }
+        LoadingFadeIMG.gameObject.SetActive(false);
     }
 
     public LevelData CurrentLevelData
@@ -126,6 +129,7 @@ public class GameManager : MonoBehaviour
     public void NextLevel()
     {
         StartCoroutine(Loading());
+        LoadingFadeIMG.gameObject.SetActive(true);
     }
 
     IEnumerator Loading()
@@ -169,11 +173,15 @@ public class GameManager : MonoBehaviour
         undo_disable_img.fillAmount = 0;
         UndoBtn.enabled = true;
 
+        
+
     }
 
     public void RestartTheGame()
     {
         StartCoroutine(Restarting());
+        LoadingFadeIMG.gameObject.SetActive(true);
+        AudioManager.instance.PlayClip(1);
     }
 
     IEnumerator Restarting()
@@ -203,6 +211,8 @@ public class GameManager : MonoBehaviour
         undo_disable_img.fillAmount = 0;
         UndoBtn.enabled = true;
 
+        LoadingFadeIMG.gameObject.SetActive(false);
+
         for (float t = 1; t > 0; t -= Time.deltaTime)
         {
             Color c = LoadingFadeIMG.color;
@@ -216,9 +226,11 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.instance.PlayClip(1);
         StartCoroutine(Returning());
+        
     }
     IEnumerator Returning()
     {
+        LoadingFadeIMG.gameObject.SetActive(true);
         for (float t = 0; t < 1; t += Time.deltaTime)
         {
             Color c = LoadingFadeIMG.color;
@@ -281,7 +293,7 @@ public class GameManager : MonoBehaviour
     {
         undoCount--;
         undoCount_txt.text = undoCount.ToString();
-        if (GameManager.instance.undoCount == 0)
+        if (undoCount == 0)
         {
             undo_disable_img.fillAmount = 1f;
             UndoBtn.enabled = false;
@@ -336,12 +348,12 @@ public class GameManager : MonoBehaviour
 
         if (auidoManager.can_vibrate)
         {
-            sound_slider.value = 0;
+            Vibrate_slider.value = 0;
             auidoManager.can_vibrate = false;
         }
         else
         {
-            sound_slider.value = 1;
+            Vibrate_slider.value = 1;
             auidoManager.can_vibrate = true;
         }
 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   columns: 4
   rows: 4
-  moveLimit: 30
+  moveLimit: 25
   No_of_Blocks: 4
   cameraPos: {x: 1.5, y: 25, z: -5}
   blocks:
