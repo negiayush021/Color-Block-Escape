@@ -10,6 +10,8 @@ public class ApplicationQuitter : MonoBehaviour
     [SerializeField] private Image DarkPanel;
     public void ExitTheApplication()
     {
+        Application.targetFrameRate = 60;
+        QualitySettings.vSyncCount = 0;
         Application.Quit();
     }
 

@@ -1,4 +1,3 @@
-using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,10 +13,13 @@ public class SwipeInputController : MonoBehaviour
     
     Vector3 GetPointerPosition()
     {
-        if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
+        if (Touchscreen.current != null)
             return Touchscreen.current.primaryTouch.position.ReadValue();
-        return Mouse.current.position.ReadValue();
 
+        if (Mouse.current != null)
+            return Mouse.current.position.ReadValue();
+
+        return Vector2.zero;
     }
 
     bool PointerPressedThisFrame()
@@ -63,7 +65,7 @@ public class SwipeInputController : MonoBehaviour
                 if (block != null)
                 {
                     selectedBlock = block;
-                    Debug.Log("Selected: " + block.name);
+                    startPos = GetPointerPosition();
                 }
             }
         }
@@ -71,10 +73,6 @@ public class SwipeInputController : MonoBehaviour
 
     private void DetectSwipe()
     {
-        if (PointerPressedThisFrame())
-        {
-            startPos = GetPointerPosition();
-        }
 
         if (PointerReleasedThisFrame())
         {

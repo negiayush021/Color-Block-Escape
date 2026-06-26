@@ -2,7 +2,6 @@ using Solo.MOST_IN_ONE;
 using System.Collections;
 using Unity.Multiplayer.PlayMode;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 
 public enum BlockColor

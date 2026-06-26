@@ -20,12 +20,12 @@ public class AsyncLoader : MonoBehaviour
     {
         ProgessBar.value = 0;
 
-        if (PlayerPrefs.GetInt("First Time") == 0)
+        /*if (PlayerPrefs.GetInt("First Time") == 0)
         {
             StartCoroutine(AysncLoadScene(2));
             PlayerPrefs.SetInt("First Time", 1);
             return;
-        }
+        }*/
 
         StartCoroutine(AysncLoadScene(1));
 
