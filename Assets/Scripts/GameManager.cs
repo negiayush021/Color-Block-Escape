@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -125,6 +126,22 @@ public class GameManager : MonoBehaviour
             LoadingFadeIMG.color = c;
             yield return null;
         }
+    }
+
+    public void ReturnToMenu()
+    {
+        StartCoroutine(Returning());
+    }
+    IEnumerator Returning()
+    {
+        for (float t = 0; t < 1; t += Time.deltaTime)
+        {
+            Color c = LoadingFadeIMG.color;
+            c.a = t;
+            LoadingFadeIMG.color = c;
+            yield return null;
+        }
+        SceneManager.LoadScene("Menu");
     }
 
 }

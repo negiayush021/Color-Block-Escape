@@ -85,7 +85,7 @@ public class Block : MonoBehaviour
     IEnumerator Escaping()
     {
         yield return new WaitForSeconds(0.5f);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
         LevelManager.Instance.CheckLevelComplete();
     }
 

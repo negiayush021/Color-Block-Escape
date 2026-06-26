@@ -1,3 +1,4 @@
+using Solo.MOST_IN_ONE;
 using System;
 using System.Collections;
 using TMPro;
@@ -87,6 +88,7 @@ public class LevelManager : MonoBehaviour
 
         levelCompleteScreen.SetActive(true);
         StartCoroutine(showing());
+        SuccessHaptic();
     }
 
     IEnumerator showing()
@@ -98,7 +100,7 @@ public class LevelManager : MonoBehaviour
 
         int count = 0;
         float percentage = Remaining_Moves_Of_Active_Level / Toatl_Moves_Of_Active_Level * 100;
-        if (percentage > 75)
+        if (percentage >= 50)
         {
             foreach (var star in stars)
             {
@@ -111,7 +113,7 @@ public class LevelManager : MonoBehaviour
                 count++;
             }
         }
-        else if (percentage > 50)
+        else if (percentage > 25)
         {
             foreach (var star in stars)
             {
@@ -138,15 +140,16 @@ public class LevelManager : MonoBehaviour
             }
         }
 
-        GiftGlow.SetActive(true);
-        RawImage img = RawImage.GetComponent<RawImage>();
+        //GiftGlow.SetActive(true);
+        /*RawImage img = RawImage.GetComponent<RawImage>();
         for (float t = 1; t > 0; t -= Time.deltaTime)
         {
             Color c = img.color;
             c.a = t;
             img.color = c;
             yield return null;
-        }
+        }*/
+        yield return new WaitForSeconds(1f);
 
         Nextlvlbtn.SetActive(true);
 
@@ -196,5 +199,10 @@ public class LevelManager : MonoBehaviour
         UIManager.Instance.UpdateMovesUI(MovesRemaining);
         YouLoseScreen.SetActive(false);
     }
-   
+
+    public void SuccessHaptic()
+    {
+        MOST_HapticFeedback.Generate(MOST_HapticFeedback.HapticTypes.Success);
+    }
+
 }
