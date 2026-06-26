@@ -1,6 +1,5 @@
 using Solo.MOST_IN_ONE;
 using System.Collections;
-using Unity.Multiplayer.PlayMode;
 using UnityEngine;
 
 
@@ -18,9 +17,19 @@ public class Block : MonoBehaviour
     public BlockData blockData;
     public Vector2Int GridPosition;
 
-    private bool IsMoving = false;
-    
+    private TrailRenderer trail;
 
+    private bool IsMoving = false;
+
+    private void Start()
+    {
+        if(this.gameObject.tag != "Obstacle")
+        {
+            trail = GetComponent<TrailRenderer>();
+            trail.enabled = false;
+        }
+        
+    }
     public void Move(Vector2Int direction)
     {
         if (IsMoving) return;
@@ -76,22 +85,41 @@ public class Block : MonoBehaviour
     {
         if (cell.ExitColor == blockData.blockColor)
         {
-            
             cell.isOccupied = false;
             Debug.Log("Block Escaped");
             cell.gateReference.OpenGate();
-            StartCoroutine(Escaping());
+            StartCoroutine(Escaping(cell.gateReference));
             LevelManager.Instance.DecreaseBlocksNumber();
             
         }
     }
 
-    IEnumerator Escaping()
+    IEnumerator Escaping(Gate gate)
     {
         yield return new WaitForSeconds(0.5f);
+
+        trail.enabled = true;
+        Transform wooden_gate_pivot = gate.transform.GetChild(1).transform;
+
+        Vector3 direction = new Vector3(
+            wooden_gate_pivot.position.x - transform.position.x,
+            0f,
+            wooden_gate_pivot.position.z - transform.position.z).normalized;
+
+        Vector3 targetPos = wooden_gate_pivot.transform.position + direction * 20f;
+
+        while (Vector3.Distance(transform.position, targetPos) > 0.01f)
+        {
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                targetPos,
+                10f * Time.deltaTime);
+
+            yield return null;
+        }
+
+
         gameObject.SetActive(false);
-
-
         GameManager.instance.hammer_disable_img.fillAmount -= 0.35f;
         GameManager.instance.undo_disable_img.fillAmount -= 0.35f;
 
