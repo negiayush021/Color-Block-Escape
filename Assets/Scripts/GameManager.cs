@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Image LoadingFadeIMG;
 
+    public bool PowerInUse = false;
+
     public event Action OnLevelChangeBtnPressed;
     public event Action OnRestartBtnPressed;
 
@@ -32,6 +34,9 @@ public class GameManager : MonoBehaviour
     public int currentLevel;
 
     public GameObject[] Designs;
+
+    public GameObject Hammer_prefab;
+    public GameObject smoke_effect;
     private void Start()
     {
         
@@ -145,6 +150,25 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         SceneManager.LoadScene("Menu");
+    }
+
+    public void destroyObstacle(GameObject block)
+    {
+        if(block.tag == "Obstacle")
+        {
+            StartCoroutine(destroyingObstacle(block));
+        }
+    }
+
+    IEnumerator destroyingObstacle(GameObject block)
+    {
+        GameObject hammer = Instantiate(Hammer_prefab, new Vector3(block.transform.position.x, block.transform.position.y + 1, block.transform.position.z - .5f), Quaternion.identity);
+        yield return new WaitForSeconds(.5f);
+        //MusicManager.instance.PlayClip(17);
+        yield return new WaitForSeconds(.2f);
+        Destroy(hammer);
+        GameObject smoke = Instantiate(smoke_effect, new Vector3(block.transform.position.x, block.transform.position.y + 1, block.transform.position.z), Quaternion.identity);
+        Destroy(block.gameObject);
     }
 
 }

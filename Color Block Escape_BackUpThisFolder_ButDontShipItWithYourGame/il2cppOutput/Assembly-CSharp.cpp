@@ -586,7 +586,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_m6A7B0462B6FC271D98A0289817379
 IL2CPP_EXTERN_C const RuntimeMethod* Object_FindObjectsByType_TisBlock_t93F87C2AAA9348AD5D7F39D890FD6B6B23AD26E7_mFB667723D7A212591F9F167D29C83000943110CE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mD136E37F696C00A3A1D4F65724ACAE903E385181_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A_m00960E8E4342B2B795E00E50B20816E19D864568_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisGate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A_mE4D10C55437455EFCE8DF5A49FF97C817A132C1A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Object_Instantiate_TisRectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5_m2EBBFED3BA1B67B30F8503C5BD918B4C1745903E_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Resources_Load_TisFont_tC95270EA3198038970422D78B74A7F2E218A96B6_m2B532BE5E14BE59B8F59F82BF8193EEEE249DC6D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Resources_Load_TisMaterial_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3_mC909CC888641BC8E1E29C8AB1C790C637C9B390E_RuntimeMethod_var;
@@ -6037,16 +6037,16 @@ inline Block_t93F87C2AAA9348AD5D7F39D890FD6B6B23AD26E7* GameObject_GetComponent_
 	return ((  Block_t93F87C2AAA9348AD5D7F39D890FD6B6B23AD26E7* (*) (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m6EAED4AA356F0F48288F67899E5958792395563B_gshared)(__this, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* GridManager_GetGatePrefab_m6B363F7810BD58CF6202E78A4CE0941BEACC2F61 (GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0* __this, int32_t ___0_color, const RuntimeMethod* method) ;
-inline Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* Object_Instantiate_TisGate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A_m00960E8E4342B2B795E00E50B20816E19D864568 (Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* ___0_original, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___2_rotation, const RuntimeMethod* method)
+inline Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* Object_Instantiate_TisGate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A_mE4D10C55437455EFCE8DF5A49FF97C817A132C1A (Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* ___0_original, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___2_rotation, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___3_parent, const RuntimeMethod* method)
 {
-	return ((  Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* (*) (Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974, const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_m249A6BA4F2F19C2D3CE217D4D31847DF0EF03EFE_gshared)(___0_original, ___1_position, ___2_rotation, method);
+	return ((  Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* (*) (Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A*, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*, const RuntimeMethod*))Object_Instantiate_TisRuntimeObject_m5F38AE6B74636F569647D545E365C5579E5F59CE_gshared)(___0_original, ___1_position, ___2_rotation, ___3_parent, method);
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline (float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_value, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8 (String_t* ___0_format, RuntimeObject* ___1_arg0, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2 (RuntimeObject* ___0_message, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager_DestroyBlocks_m0174CA1CA2C45A97B83F85CE954D83F17375F7B2 (GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager_DestroyGrid_m84981B25809C4FFD6107CF3F980075824B32D16D (GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager_DestroyGrid_and_Gates_m61E36D3484EA9BE14E614F9E84AAD0C15A8509C6 (GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0* __this, const RuntimeMethod* method) ;
 inline BlockU5BU5D_t1F9E73BEB91F1D1649CFE163C2A893A6051ACEA8* Object_FindObjectsByType_TisBlock_t93F87C2AAA9348AD5D7F39D890FD6B6B23AD26E7_mFB667723D7A212591F9F167D29C83000943110CE (int32_t ___0_sortMode, const RuntimeMethod* method)
 {
 	return ((  BlockU5BU5D_t1F9E73BEB91F1D1649CFE163C2A893A6051ACEA8* (*) (int32_t, const RuntimeMethod*))Object_FindObjectsByType_TisRuntimeObject_m9F3B83321CD4E4F4F764805ADCEF338CF2BA8409_gshared)(___0_sortMode, method);
@@ -9485,7 +9485,7 @@ IL_0078:
 	}
 }
 // Method Definition Index: 64747
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager_DestroyGrid_m84981B25809C4FFD6107CF3F980075824B32D16D (GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0* __this, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager_DestroyGrid_and_Gates_m61E36D3484EA9BE14E614F9E84AAD0C15A8509C6 (GridManager_t45021D7E88EBBB4ECCF37D3B34CE0BB4372219A0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -9854,7 +9854,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager_SpawnGates_m1427F1FD9567AA24
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_Instantiate_TisGate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A_m00960E8E4342B2B795E00E50B20816E19D864568_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_Instantiate_TisGate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A_mE4D10C55437455EFCE8DF5A49FF97C817A132C1A_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		s_Il2CppMethodInitialized = true;
 	}
@@ -9869,7 +9869,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager_SpawnGates_m1427F1FD9567AA24
 		GateSpawnDataU5BU5D_t3969FF63576853F495281F30D762F0B0819657CA* L_1 = L_0->___gates;
 		V_0 = L_1;
 		V_1 = 0;
-		goto IL_0131;
+		goto IL_0137;
 	}
 
 IL_0013:
@@ -9907,142 +9907,144 @@ IL_0013:
 		L_15 = GridManager_GetWorldPosition_m81297C881787506509F7F0176CD1CD944A783623(__this, L_11, L_14, NULL);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_16;
 		L_16 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_17;
+		L_17 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* L_17;
-		L_17 = Object_Instantiate_TisGate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A_m00960E8E4342B2B795E00E50B20816E19D864568(L_8, L_15, L_16, Object_Instantiate_TisGate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A_m00960E8E4342B2B795E00E50B20816E19D864568_RuntimeMethod_var);
-		V_3 = L_17;
+		Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* L_18;
+		L_18 = Object_Instantiate_TisGate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A_mE4D10C55437455EFCE8DF5A49FF97C817A132C1A(L_8, L_15, L_16, L_17, Object_Instantiate_TisGate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A_mE4D10C55437455EFCE8DF5A49FF97C817A132C1A_RuntimeMethod_var);
+		V_3 = L_18;
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:142>
-		Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* L_18 = V_3;
-		GateSpawnData_t7DC23ADEF841FD27B9C68E301FF7FDED293973A9* L_19 = V_2;
+		Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* L_19 = V_3;
+		GateSpawnData_t7DC23ADEF841FD27B9C68E301FF7FDED293973A9* L_20 = V_2;
+		NullCheck(L_20);
+		int32_t L_21 = L_20->___gateColor;
 		NullCheck(L_19);
-		int32_t L_20 = L_19->___gateColor;
-		NullCheck(L_18);
-		L_18->___gateColor = L_20;
+		L_19->___gateColor = L_21;
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:144>
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:145>
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:146>
-		GateSpawnData_t7DC23ADEF841FD27B9C68E301FF7FDED293973A9* L_21 = V_2;
-		NullCheck(L_21);
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_22 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&L_21->___position);
-		int32_t L_23;
-		L_23 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_22, NULL);
-		GateSpawnData_t7DC23ADEF841FD27B9C68E301FF7FDED293973A9* L_24 = V_2;
-		NullCheck(L_24);
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_25 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&L_24->___position);
-		int32_t L_26;
-		L_26 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline(L_25, NULL);
-		GridCell_t4804DEBB391E2710E77F1502817B58E896FB24D3* L_27;
-		L_27 = GridManager_GetCell_mA18BEB052694FBF5EC710604A41EDB66EC03314E(__this, L_23, L_26, NULL);
+		GateSpawnData_t7DC23ADEF841FD27B9C68E301FF7FDED293973A9* L_22 = V_2;
+		NullCheck(L_22);
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_23 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&L_22->___position);
+		int32_t L_24;
+		L_24 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_23, NULL);
+		GateSpawnData_t7DC23ADEF841FD27B9C68E301FF7FDED293973A9* L_25 = V_2;
+		NullCheck(L_25);
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_26 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&L_25->___position);
+		int32_t L_27;
+		L_27 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline(L_26, NULL);
+		GridCell_t4804DEBB391E2710E77F1502817B58E896FB24D3* L_28;
+		L_28 = GridManager_GetCell_mA18BEB052694FBF5EC710604A41EDB66EC03314E(__this, L_24, L_27, NULL);
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:148>
-		GridCell_t4804DEBB391E2710E77F1502817B58E896FB24D3* L_28 = L_27;
-		NullCheck(L_28);
-		L_28->___cellType = 1;
-		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:149>
 		GridCell_t4804DEBB391E2710E77F1502817B58E896FB24D3* L_29 = L_28;
-		GateSpawnData_t7DC23ADEF841FD27B9C68E301FF7FDED293973A9* L_30 = V_2;
+		NullCheck(L_29);
+		L_29->___cellType = 1;
+		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:149>
+		GridCell_t4804DEBB391E2710E77F1502817B58E896FB24D3* L_30 = L_29;
+		GateSpawnData_t7DC23ADEF841FD27B9C68E301FF7FDED293973A9* L_31 = V_2;
+		NullCheck(L_31);
+		int32_t L_32 = L_31->___gateColor;
 		NullCheck(L_30);
-		int32_t L_31 = L_30->___gateColor;
-		NullCheck(L_29);
-		L_29->___ExitColor = L_31;
+		L_30->___ExitColor = L_32;
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:150>
-		Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* L_32 = V_3;
-		NullCheck(L_29);
-		L_29->___gateReference = L_32;
-		Il2CppCodeGenWriteBarrier((void**)(&L_29->___gateReference), (void*)L_32);
+		Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* L_33 = V_3;
+		NullCheck(L_30);
+		L_30->___gateReference = L_33;
+		Il2CppCodeGenWriteBarrier((void**)(&L_30->___gateReference), (void*)L_33);
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:152>
-		GateSpawnData_t7DC23ADEF841FD27B9C68E301FF7FDED293973A9* L_33 = V_2;
-		NullCheck(L_33);
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_34 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&L_33->___position);
-		int32_t L_35;
-		L_35 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_34, NULL);
-		if (L_35)
+		GateSpawnData_t7DC23ADEF841FD27B9C68E301FF7FDED293973A9* L_34 = V_2;
+		NullCheck(L_34);
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_35 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&L_34->___position);
+		int32_t L_36;
+		L_36 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_35, NULL);
+		if (L_36)
 		{
-			goto IL_00b9;
+			goto IL_00bf;
 		}
 	}
 	{
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:154>
-		Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* L_36 = V_3;
-		NullCheck(L_36);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_37;
-		L_37 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_36, NULL);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_38;
-		L_38 = Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline((0.0f), (180.0f), (0.0f), NULL);
+		Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* L_37 = V_3;
 		NullCheck(L_37);
-		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_37, L_38, NULL);
-		goto IL_012d;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_38;
+		L_38 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_37, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_39;
+		L_39 = Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline((0.0f), (180.0f), (0.0f), NULL);
+		NullCheck(L_38);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_38, L_39, NULL);
+		goto IL_0133;
 	}
 
-IL_00b9:
+IL_00bf:
 	{
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:158>
-		GateSpawnData_t7DC23ADEF841FD27B9C68E301FF7FDED293973A9* L_39 = V_2;
-		NullCheck(L_39);
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_40 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&L_39->___position);
-		int32_t L_41;
-		L_41 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_40, NULL);
-		LevelData_tE6EAE053C277D3E4ED073363F0BF24BDBADFC4D5* L_42 = __this->___currentLevel;
-		NullCheck(L_42);
-		int32_t L_43 = L_42->___rows;
-		if ((((int32_t)L_41) == ((int32_t)((int32_t)il2cpp_codegen_subtract(L_43, 1)))))
+		GateSpawnData_t7DC23ADEF841FD27B9C68E301FF7FDED293973A9* L_40 = V_2;
+		NullCheck(L_40);
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_41 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&L_40->___position);
+		int32_t L_42;
+		L_42 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_41, NULL);
+		LevelData_tE6EAE053C277D3E4ED073363F0BF24BDBADFC4D5* L_43 = __this->___currentLevel;
+		NullCheck(L_43);
+		int32_t L_44 = L_43->___columns;
+		if ((((int32_t)L_42) == ((int32_t)((int32_t)il2cpp_codegen_subtract(L_44, 1)))))
 		{
-			goto IL_012d;
+			goto IL_0133;
 		}
 	}
 	{
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:161>
-		GateSpawnData_t7DC23ADEF841FD27B9C68E301FF7FDED293973A9* L_44 = V_2;
-		NullCheck(L_44);
-		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_45 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&L_44->___position);
-		int32_t L_46;
-		L_46 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline(L_45, NULL);
-		LevelData_tE6EAE053C277D3E4ED073363F0BF24BDBADFC4D5* L_47 = __this->___currentLevel;
-		NullCheck(L_47);
-		int32_t L_48 = L_47->___columns;
-		if ((!(((uint32_t)L_46) == ((uint32_t)((int32_t)il2cpp_codegen_subtract(L_48, 1))))))
+		GateSpawnData_t7DC23ADEF841FD27B9C68E301FF7FDED293973A9* L_45 = V_2;
+		NullCheck(L_45);
+		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_46 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&L_45->___position);
+		int32_t L_47;
+		L_47 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline(L_46, NULL);
+		LevelData_tE6EAE053C277D3E4ED073363F0BF24BDBADFC4D5* L_48 = __this->___currentLevel;
+		NullCheck(L_48);
+		int32_t L_49 = L_48->___rows;
+		if ((!(((uint32_t)L_47) == ((uint32_t)((int32_t)il2cpp_codegen_subtract(L_49, 1))))))
 		{
-			goto IL_010e;
+			goto IL_0114;
 		}
 	}
 	{
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:163>
-		Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* L_49 = V_3;
-		NullCheck(L_49);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_50;
-		L_50 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_49, NULL);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_51;
-		L_51 = Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline((0.0f), (-90.0f), (0.0f), NULL);
+		Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* L_50 = V_3;
 		NullCheck(L_50);
-		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_50, L_51, NULL);
-		goto IL_012d;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_51;
+		L_51 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_50, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_52;
+		L_52 = Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline((0.0f), (-90.0f), (0.0f), NULL);
+		NullCheck(L_51);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_51, L_52, NULL);
+		goto IL_0133;
 	}
 
-IL_010e:
+IL_0114:
 	{
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:167>
-		Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* L_52 = V_3;
-		NullCheck(L_52);
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_53;
-		L_53 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_52, NULL);
-		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_54;
-		L_54 = Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline((0.0f), (90.0f), (0.0f), NULL);
+		Gate_tD423C3E3C6A390BF4DCC10322CBA2485840FF97A* L_53 = V_3;
 		NullCheck(L_53);
-		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_53, L_54, NULL);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_54;
+		L_54 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_53, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_55;
+		L_55 = Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline((0.0f), (90.0f), (0.0f), NULL);
+		NullCheck(L_54);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_54, L_55, NULL);
 	}
 
-IL_012d:
+IL_0133:
 	{
-		int32_t L_55 = V_1;
-		V_1 = ((int32_t)il2cpp_codegen_add(L_55, 1));
+		int32_t L_56 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add(L_56, 1));
 	}
 
-IL_0131:
+IL_0137:
 	{
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:131>
-		int32_t L_56 = V_1;
-		GateSpawnDataU5BU5D_t3969FF63576853F495281F30D762F0B0819657CA* L_57 = V_0;
-		NullCheck(L_57);
-		if ((((int32_t)L_56) < ((int32_t)((int32_t)(((RuntimeArray*)L_57)->max_length)))))
+		int32_t L_57 = V_1;
+		GateSpawnDataU5BU5D_t3969FF63576853F495281F30D762F0B0819657CA* L_58 = V_0;
+		NullCheck(L_58);
+		if ((((int32_t)L_57) < ((int32_t)((int32_t)(((RuntimeArray*)L_58)->max_length)))))
 		{
 			goto IL_0013;
 		}
@@ -10142,7 +10144,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager_LevelChange_m06D0398585794BF
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:188>
 		GridManager_DestroyBlocks_m0174CA1CA2C45A97B83F85CE954D83F17375F7B2(__this, NULL);
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:189>
-		GridManager_DestroyGrid_m84981B25809C4FFD6107CF3F980075824B32D16D(__this, NULL);
+		GridManager_DestroyGrid_and_Gates_m61E36D3484EA9BE14E614F9E84AAD0C15A8509C6(__this, NULL);
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:190>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_0 = ((GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_StaticFields*)il2cpp_codegen_static_fields_for(GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6_il2cpp_TypeInfo_var))->___instance;
 		NullCheck(L_0);
@@ -10223,11 +10225,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager_Restart_m79B6FA754EC78BD8EB4
 	{
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:209>
 		GridManager_DestroyBlocks_m0174CA1CA2C45A97B83F85CE954D83F17375F7B2(__this, NULL);
-		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:210>
-		GridManager_SpawnBlocks_mE67C27882EC504FB6FA8E3FCDDD103A38A4186BB(__this, NULL);
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:211>
 		GridManager_ClearGridOccupancy_m81830DD9FA35293E719958735F451DCD822DEF17(__this, NULL);
 		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:213>
+		GridManager_SpawnBlocks_mE67C27882EC504FB6FA8E3FCDDD103A38A4186BB(__this, NULL);
+		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:215>
 		return;
 	}
 }
@@ -10237,21 +10239,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GridManager_ClearGridOccupancy_m81830DD9
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	{
-		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:216>
+		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:218>
 		V_0 = 0;
 		goto IL_0031;
 	}
 
 IL_0004:
 	{
-		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:218>
+		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:220>
 		V_1 = 0;
 		goto IL_001f;
 	}
 
 IL_0008:
 	{
-		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:220>
+		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:222>
 		GridCellU5BU2CU5D_t9194C929F0CE023A627FAD7B02CBF7768C652955* L_0 = __this->___grid;
 		int32_t L_1 = V_0;
 		int32_t L_2 = V_1;
@@ -10260,14 +10262,14 @@ IL_0008:
 		L_3 = (L_0)->GetAt(L_1, L_2);
 		NullCheck(L_3);
 		L_3->___isOccupied = (bool)0;
-		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:218>
+		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:220>
 		int32_t L_4 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_4, 1));
 	}
 
 IL_001f:
 	{
-		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:218>
+		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:220>
 		int32_t L_5 = V_1;
 		LevelData_tE6EAE053C277D3E4ED073363F0BF24BDBADFC4D5* L_6 = __this->___currentLevel;
 		NullCheck(L_6);
@@ -10278,14 +10280,14 @@ IL_001f:
 		}
 	}
 	{
-		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:216>
+		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:218>
 		int32_t L_8 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 	}
 
 IL_0031:
 	{
-		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:216>
+		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:218>
 		int32_t L_9 = V_0;
 		LevelData_tE6EAE053C277D3E4ED073363F0BF24BDBADFC4D5* L_10 = __this->___currentLevel;
 		NullCheck(L_10);
@@ -10296,7 +10298,7 @@ IL_0031:
 		}
 	}
 	{
-		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:223>
+		//<source_info:C:/UnityProjects/Repositories Folder/Color-Block-Escape/Assets/Scripts/Grid System/GridManager.cs:225>
 		return;
 	}
 }

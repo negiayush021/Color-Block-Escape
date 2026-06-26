@@ -63,7 +63,7 @@ public class GridManager : MonoBehaviour
         Debug.Log($"Grid created: {currentLevel.columns}x{currentLevel.rows}");
     }
 
-    public void DestroyGrid()
+    public void DestroyGrid_and_Gates()
     {
         foreach (Transform child in transform)
         {
@@ -137,7 +137,7 @@ public class GridManager : MonoBehaviour
                 GetWorldPosition(
                     gateData.position.x,
                     gateData.position.y),
-                Quaternion.identity);
+                Quaternion.identity , transform);
 
             gate.gateColor = gateData.gateColor;
 
@@ -155,10 +155,10 @@ public class GridManager : MonoBehaviour
             }
             else
             {
-                if (gateData.position.x == currentLevel.rows - 1)
+                if (gateData.position.x == currentLevel.columns - 1)
                     continue;
 
-                if (gateData.position.y == currentLevel.columns-1)
+                if (gateData.position.y == currentLevel.rows - 1)
                 {
                     gate.transform.rotation = Quaternion.Euler(0, -90, 0);
                 }
@@ -186,7 +186,7 @@ public class GridManager : MonoBehaviour
     private void LevelChange()
     {
         DestroyBlocks();
-        DestroyGrid();
+        DestroyGrid_and_Gates();
         currentLevel = GameManager.instance.CurrentLevelData;
 
         GenerateGrid();
@@ -207,8 +207,10 @@ public class GridManager : MonoBehaviour
     private void Restart()
     {
         DestroyBlocks();
-        SpawnBlocks();
+
         ClearGridOccupancy();
+
+        SpawnBlocks();
 
     }
     public void ClearGridOccupancy()
