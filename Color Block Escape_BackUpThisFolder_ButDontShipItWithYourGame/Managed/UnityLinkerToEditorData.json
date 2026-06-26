@@ -78,7 +78,10 @@
           },
           {
             "name": "AudioClip",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Game Scene.unity",
+              "Assets/Scenes/Menu.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -100,8 +103,20 @@
           },
           {
             "name": "AudioResource",
-            "scenes": [],
-            "dependencyType": 1,
+            "scenes": [
+              "Assets/Scenes/Game Scene.unity",
+              "Assets/Scenes/Menu.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AudioSource",
+            "scenes": [
+              "Assets/Scenes/Game Scene.unity",
+              "Assets/Scenes/Menu.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -523,6 +538,14 @@
             "name": "TimeManager",
             "scenes": [],
             "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "TrailRenderer",
+            "scenes": [
+              "Assets/Scenes/Game Scene.unity"
+            ],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -983,13 +1006,17 @@
         "dependencies": [
           {
             "name": "ParticleSystem",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Game Scene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "ParticleSystemRenderer",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/Game Scene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           }

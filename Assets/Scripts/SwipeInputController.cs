@@ -19,6 +19,7 @@ public class SwipeInputController : MonoBehaviour
         if (Mouse.current != null)
             return Mouse.current.position.ReadValue();
 
+        UndoManager.Instance.ShowMessage("cannot swipe");
         return Vector2.zero;
     }
 
@@ -71,6 +72,7 @@ public class SwipeInputController : MonoBehaviour
                         UndoManager.Instance.SaveState();
                         GameManager.instance.destroyObstacle(selectedBlock);
                         selectedBlock = null;
+                        return;
                     }
 
                     startPos = GetPointerPosition();

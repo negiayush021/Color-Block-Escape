@@ -27,7 +27,7 @@ MonoBehaviour:
   - blockData: {fileID: 11400000, guid: 554ce7e7eea89b14da66a28d65f20f6d, type: 2}
     position: {x: 4, y: 4}
   - blockData: {fileID: 11400000, guid: 554ce7e7eea89b14da66a28d65f20f6d, type: 2}
-    position: {x: 2, y: 4}
+    position: {x: 2, y: 3}
   - blockData: {fileID: 11400000, guid: 59e77b793d9df2c42ac76fc57e7a9836, type: 2}
     position: {x: 0, y: 5}
   - blockData: {fileID: 11400000, guid: 59e77b793d9df2c42ac76fc57e7a9836, type: 2}

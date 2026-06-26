@@ -138,6 +138,11 @@ public class GameManager : MonoBehaviour
             LoadingFadeIMG.color = c;
             yield return null;
         }
+        if(currentLevel >= 5)
+        {
+            SceneManager.LoadScene("Menu");
+            yield break;
+;        }
 
         StartCoroutine(startingTheGame());
         OnLevelChangeBtnPressed?.Invoke();
@@ -169,7 +174,6 @@ public class GameManager : MonoBehaviour
     public void RestartTheGame()
     {
         StartCoroutine(Restarting());
-        
     }
 
     IEnumerator Restarting()
@@ -182,6 +186,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
         OnRestartBtnPressed?.Invoke();
+        homePage.SetActive(false);
 
         //hammer Power Section
 

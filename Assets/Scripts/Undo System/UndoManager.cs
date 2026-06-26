@@ -55,7 +55,7 @@ public class UndoManager : MonoBehaviour
     {
         if (undoStack.Count == 0)
         {
-            StartCoroutine(ShowMessage("There is no State to Undo"));
+            ShowMessage("There is no State to Undo");
             return;
         }
             
@@ -97,7 +97,12 @@ public class UndoManager : MonoBehaviour
 
         }
     }
-    IEnumerator ShowMessage(string message)
+
+    public void ShowMessage(string message)
+    {
+        StartCoroutine(Showing(message));
+    }
+    IEnumerator Showing(string message)
     {
         GameObject box = Instantiate(messageBox , canvas);
         box.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = message;

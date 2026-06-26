@@ -156,7 +156,7 @@ public class Block : MonoBehaviour
         Vector3 startPos = transform.position;
         Vector3 targetPos = GridManager.instance.GetWorldPosition(GridPos.x, GridPos.y);
 
-        float duration = 0.1f;
+        float duration = 0.05f;
         float elapsed = 0f;
 
         while (elapsed < duration)

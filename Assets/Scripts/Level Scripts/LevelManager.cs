@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour
 
     public event Action OnLevelComplete;
     public int MovesRemaining { get; private set; }
-    public int BlocksRemaining { get; private set; }
+    public int BlocksRemaining;
 
     private void Awake()
     {
@@ -105,7 +105,7 @@ public class LevelManager : MonoBehaviour
 
         int count = 0;
         float percentage = Remaining_Moves_Of_Active_Level / Toatl_Moves_Of_Active_Level * 100;
-        if (percentage >= 50)
+        if (percentage >= 40)
         {
             foreach (var star in stars)
             {
@@ -166,7 +166,6 @@ public class LevelManager : MonoBehaviour
 
     private void LevelChange()
     {
-
         currentLevel = GameManager.instance.CurrentLevelData;
         HideLevelComplete();
         MovesRemaining = currentLevel.moveLimit;
@@ -196,6 +195,7 @@ public class LevelManager : MonoBehaviour
     private void Restart()
     {
         MovesRemaining = currentLevel.moveLimit;
+        BlocksRemaining = currentLevel.No_of_Blocks;
         UIManager.Instance.UpdateMovesUI(MovesRemaining);
         YouLoseScreen.SetActive(false);
     }
