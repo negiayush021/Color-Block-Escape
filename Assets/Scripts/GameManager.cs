@@ -106,16 +106,19 @@ public class GameManager : MonoBehaviour
 
     public void OpenSettingsPage()
     {
+        AudioManager.instance.PlayClip(0);
         settingsPage.SetActive(true);
     }
 
     public void OpenHomePage()
     {
+        AudioManager.instance.PlayClip(0);
         homePage.SetActive(true);
     }
 
     public void ClosePages()
     {
+        AudioManager.instance.PlayClip(2);
         homePage.SetActive(false);
         settingsPage.SetActive(false);
     }
@@ -206,6 +209,7 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToMenu()
     {
+        AudioManager.instance.PlayClip(1);
         StartCoroutine(Returning());
     }
     IEnumerator Returning()
@@ -253,7 +257,7 @@ public class GameManager : MonoBehaviour
             Quaternion.identity);
 
         yield return new WaitForSeconds(.5f);
-        //MusicManager.instance.PlayClip(17);
+        AudioManager.instance.PlayClip(4);
         yield return new WaitForSeconds(.2f);
         Destroy(hammer);
         GameObject smoke = Instantiate(smoke_effect, new Vector3(block.transform.position.x, block.transform.position.y + 1, block.transform.position.z), Quaternion.identity);
@@ -277,6 +281,65 @@ public class GameManager : MonoBehaviour
             undo_disable_img.fillAmount = 1f;
             UndoBtn.enabled = false;
         }
+    }
+
+
+    [SerializeField] private Slider music_slider;
+    public void MusicBtn()
+    {
+        AudioManager auidoManager = FindAnyObjectByType<AudioManager>();
+
+        if (auidoManager.musicPlaying)
+        {
+            music_slider.value = 0;
+            auidoManager.audioSource_music.mute = true;
+            auidoManager.musicPlaying = false;
+        }
+        else
+        {
+            music_slider.value = 1;
+            auidoManager.audioSource_music.mute = false;
+            auidoManager.musicPlaying = true;
+        }
+        
+    }
+
+
+    [SerializeField] private Slider sound_slider;
+    public void SoundBtn()
+    {
+        AudioManager auidoManager = FindAnyObjectByType<AudioManager>();
+
+        if (auidoManager.can_play_sound)
+        {
+            sound_slider.value = 0;
+            auidoManager.can_play_sound = false;
+        }
+        else
+        {
+            sound_slider.value = 1;
+            auidoManager.can_play_sound = true;
+        }
+
+    }
+
+
+    [SerializeField] private Slider Vibrate_slider;
+    public void VibrateBtn()
+    {
+        AudioManager auidoManager = FindAnyObjectByType<AudioManager>();
+
+        if (auidoManager.can_vibrate)
+        {
+            sound_slider.value = 0;
+            auidoManager.can_vibrate = false;
+        }
+        else
+        {
+            sound_slider.value = 1;
+            auidoManager.can_vibrate = true;
+        }
+
     }
 
 }

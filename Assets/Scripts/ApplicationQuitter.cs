@@ -17,16 +17,19 @@ public class ApplicationQuitter : MonoBehaviour
 
     public void PlayBtn()
     {
+        AudioManager.instance.PlayClip(1);
         LevelsMenu.SetActive(true);
     }
 
     public void BackBtn()
     {
+        AudioManager.instance.PlayClip(1);
         LevelsMenu.SetActive(false);
     }
 
     public void OpenLevel(int num)
     {
+        AudioManager.instance.PlayClip(1);
         PlayerPrefs.SetInt("Open Level", num);
         StartCoroutine(Opening());
     }

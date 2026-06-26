@@ -86,9 +86,14 @@ public class LevelManager : MonoBehaviour
     {
         OnLevelComplete?.Invoke();
 
+        AudioManager.instance.PlayClip(5);
+
         levelCompleteScreen.SetActive(true);
         StartCoroutine(showing());
-        SuccessHaptic();
+        if (AudioManager.instance.can_vibrate == true)
+        {
+            AudioManager.instance.SuccessHaptic();
+        }
     }
 
     IEnumerator showing()
@@ -140,15 +145,6 @@ public class LevelManager : MonoBehaviour
             }
         }
 
-        //GiftGlow.SetActive(true);
-        /*RawImage img = RawImage.GetComponent<RawImage>();
-        for (float t = 1; t > 0; t -= Time.deltaTime)
-        {
-            Color c = img.color;
-            c.a = t;
-            img.color = c;
-            yield return null;
-        }*/
         yield return new WaitForSeconds(1f);
 
         Nextlvlbtn.SetActive(true);
@@ -192,6 +188,10 @@ public class LevelManager : MonoBehaviour
     {
         BlocksRemaining--;
     }
+    public void IncreaseBlocksNumber()
+    {
+        BlocksRemaining++;
+    }
 
     private void Restart()
     {
@@ -200,9 +200,5 @@ public class LevelManager : MonoBehaviour
         YouLoseScreen.SetActive(false);
     }
 
-    public void SuccessHaptic()
-    {
-        MOST_HapticFeedback.Generate(MOST_HapticFeedback.HapticTypes.Success);
-    }
-
+    
 }

@@ -43,7 +43,10 @@ public class Block : MonoBehaviour
         if (targetCell == null)
         {
             StartCoroutine(shakeEffect(direction));
-            LightImpactHaptic();
+            if (AudioManager.instance.can_vibrate == true)
+            {
+                AudioManager.instance.LightImpactHaptic();
+            }
             Debug.Log("Out of bounds");
             return;
         }
@@ -51,7 +54,10 @@ public class Block : MonoBehaviour
         if (!GridManager.instance.CanMoveToCell(targetCell.X, targetCell.Y))
         {
             StartCoroutine(shakeEffect(direction));
-            LightImpactHaptic();
+            if(AudioManager.instance.can_vibrate == true)
+            {
+                AudioManager.instance.LightImpactHaptic();
+            }
             Debug.Log("Cannot move");
             return;
         }
@@ -98,6 +104,7 @@ public class Block : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
 
+        AudioManager.instance.PlayClip(3);
         trail.enabled = true;
         Transform wooden_gate_pivot = gate.transform.GetChild(1).transform;
 
@@ -106,7 +113,7 @@ public class Block : MonoBehaviour
             0f,
             wooden_gate_pivot.position.z - transform.position.z).normalized;
 
-        Vector3 targetPos = wooden_gate_pivot.transform.position + direction * 20f;
+        Vector3 targetPos = wooden_gate_pivot.transform.position + direction * 5f;
 
         while (Vector3.Distance(transform.position, targetPos) > 0.01f)
         {
@@ -123,7 +130,7 @@ public class Block : MonoBehaviour
         GameManager.instance.hammer_disable_img.fillAmount -= 0.35f;
         GameManager.instance.undo_disable_img.fillAmount -= 0.35f;
 
-        if (GameManager.instance.hammer_disable_img.fillAmount <= 0)
+        if (GameManager.instance.hammer_disable_img.fillAmount <= 0 )
         {
             //Power active now
             GameManager.instance.hammer_disable_img.enabled = false;
@@ -131,11 +138,11 @@ public class Block : MonoBehaviour
             GameManager.instance.hammerCount_txt.text = GameManager.instance.hammerPowerCount.ToString();
         }
         
-        if (GameManager.instance.undo_disable_img.fillAmount <= 0)
+        if (GameManager.instance.undo_disable_img.fillAmount <= 0 )
         {
             //undo active now
             GameManager.instance.undo_disable_img.enabled = false;
-            GameManager.instance.undoCount += 3;
+            GameManager.instance.undoCount += 2;
             GameManager.instance.undoCount_txt.text = GameManager.instance.undoCount.ToString();
         }
         
@@ -196,8 +203,5 @@ public class Block : MonoBehaviour
         transform.position = originalPos;
     }
 
-    public void LightImpactHaptic()
-    {
-        MOST_HapticFeedback.Generate(MOST_HapticFeedback.HapticTypes.LightImpact);
-    }
+    
 }

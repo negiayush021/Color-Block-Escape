@@ -77,8 +77,18 @@ public class UndoManager : MonoBehaviour
 
             cell.isOccupied = false;
 
+            bool wasInactive = !blockState.block.gameObject.activeSelf;
+            bool willBeActive = blockState.isActive;
+
             blockState.block.GridPosition = blockState.position;
             blockState.block.gameObject.SetActive(blockState.isActive);
+
+            
+            if (wasInactive && willBeActive)
+            {
+                LevelManager.Instance.IncreaseBlocksNumber();
+            }
+
             blockState.block.transform.position =
                 GridManager.instance.GetWorldPosition(
                     blockState.position.x,
