@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UndoManager : MonoBehaviour
@@ -7,6 +9,9 @@ public class UndoManager : MonoBehaviour
 
     private Stack<MoveState> undoStack = new Stack<MoveState>();
 
+
+    public GameObject messageBox;
+    public Transform canvas;
     private void Awake()
     {
         Instance = this;
@@ -34,8 +39,8 @@ public class UndoManager : MonoBehaviour
 
         foreach (Block block in blocks)
         {
-            BlockState blockState = new BlockState();
 
+            BlockState blockState = new BlockState();
             blockState.block = block;
             blockState.position = block.GridPosition;
             blockState.isActive = block.gameObject.activeSelf;
@@ -49,13 +54,23 @@ public class UndoManager : MonoBehaviour
     public void Undo()
     {
         if (undoStack.Count == 0)
+        {
+            StartCoroutine(ShowMessage("There is no State to Undo"));
             return;
+        }
+            
+
+        GameManager.instance.UseUndoPower();
 
         MoveState state = undoStack.Pop();
         LevelManager.Instance.RestoreMove();
-        print("Undo");
+
+
+
         foreach (var blockState in state.blockStates)
         {
+            
+
             GridCell cell = GridManager.instance.GetCell(
                 blockState.block.GridPosition.x,
                 blockState.block.GridPosition.y);
@@ -68,8 +83,16 @@ public class UndoManager : MonoBehaviour
                 GridManager.instance.GetWorldPosition(
                     blockState.position.x,
                     blockState.position.y);
- 
+
+
         }
+    }
+    IEnumerator ShowMessage(string message)
+    {
+        GameObject box = Instantiate(messageBox , canvas);
+        box.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = message;
+        yield return new WaitForSeconds(1);
+        Destroy(box);
     }
 
     private void Restart()

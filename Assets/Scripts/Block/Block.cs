@@ -65,13 +65,18 @@ public class Block : MonoBehaviour
         LevelManager.Instance.UseMove();
         GridPosition = targetPosition;
 
-        StartCoroutine(Moving(GridPosition));
+        if(this.gameObject.activeSelf == true)
+        {
+            StartCoroutine(Moving(GridPosition));
+        }
+        
     }
 
     private void CheckExit(GridCell cell)
     {
         if (cell.ExitColor == blockData.blockColor)
         {
+            
             cell.isOccupied = false;
             Debug.Log("Block Escaped");
             cell.gateReference.OpenGate();
@@ -85,6 +90,28 @@ public class Block : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
+
+
+        GameManager.instance.hammer_disable_img.fillAmount -= 0.35f;
+        GameManager.instance.undo_disable_img.fillAmount -= 0.35f;
+
+        if (GameManager.instance.hammer_disable_img.fillAmount <= 0)
+        {
+            //Power active now
+            GameManager.instance.hammer_disable_img.enabled = false;
+            GameManager.instance.hammerPowerCount += 1;
+            GameManager.instance.hammerCount_txt.text = GameManager.instance.hammerPowerCount.ToString();
+        }
+        
+        if (GameManager.instance.undo_disable_img.fillAmount <= 0)
+        {
+            //undo active now
+            GameManager.instance.undo_disable_img.enabled = false;
+            GameManager.instance.undoCount += 3;
+            GameManager.instance.undoCount_txt.text = GameManager.instance.undoCount.ToString();
+        }
+        
+
         LevelManager.Instance.CheckLevelComplete();
     }
 

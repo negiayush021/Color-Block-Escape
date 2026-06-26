@@ -48,7 +48,7 @@ public class SwipeInputController : MonoBehaviour
 
         if (selectedBlock == null)
             return;
-
+        
         DetectSwipe();
     }
 
@@ -68,7 +68,9 @@ public class SwipeInputController : MonoBehaviour
 
                     if (GameManager.instance.PowerInUse == true)
                     {
-                        GameManager.instance.destroyObstacle(selectedBlock.gameObject);
+                        UndoManager.Instance.SaveState();
+                        GameManager.instance.destroyObstacle(selectedBlock);
+                        selectedBlock = null;
                     }
 
                     startPos = GetPointerPosition();
