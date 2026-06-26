@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2381629478032003710}
   - component: {fileID: 7991517452747925524}
   - component: {fileID: 243484669226687412}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: hinge1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 3179673810780162416}
   - component: {fileID: 7139739275738094986}
   - component: {fileID: 4038141965827744577}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 3541681954202719122}
   - component: {fileID: 161471326066387661}
   - component: {fileID: 4800256227147272921}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: hinge2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 254387910422668481}
   - component: {fileID: 7635235046718693597}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Wood_gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -338,7 +338,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 324399090535259725}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,7 +371,7 @@ GameObject:
   - component: {fileID: 1445549111508201001}
   - component: {fileID: 8182933480954518705}
   - component: {fileID: 3489354450932445152}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 6667471388868730786}
   - component: {fileID: 3426503815868136738}
   - component: {fileID: 1035807754858944268}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 808094279390695983}
   - component: {fileID: 1628301524172567586}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Red Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -607,7 +607,7 @@ GameObject:
   - component: {fileID: 6732129806710782858}
   - component: {fileID: 8087013820423306526}
   - component: {fileID: 4285393359452714624}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Cube.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}

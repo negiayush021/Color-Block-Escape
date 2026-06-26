@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1101490742046645223}
   - component: {fileID: 8059780557765256357}
   - component: {fileID: 4359900925992489950}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4726240581496695233}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: pivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 3423204792835606585}
   - component: {fileID: 7184566099196287408}
   - component: {fileID: 2098423990391765594}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: hinge1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   - component: {fileID: 6425058702698577106}
   - component: {fileID: 7238680398246652085}
   - component: {fileID: 6815496833597108910}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 330739242547287154}
   - component: {fileID: 2675618729597659538}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Green Gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ GameObject:
   - component: {fileID: 6678348890841458554}
   - component: {fileID: 6518757695695706863}
   - component: {fileID: 3665598777185940220}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: hinge2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 4138494956768523500}
   - component: {fileID: 4616764745223930491}
   - component: {fileID: 8405952312896594683}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 627264518971333409}
   - component: {fileID: 8130981805766500324}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Wood_gate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 9011283432026471859}
   - component: {fileID: 6917456519265741663}
   - component: {fileID: 6744318140269620984}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}

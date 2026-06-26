@@ -19,7 +19,6 @@ public class GridManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        //GameManager.instance.OnLevelChangeBtnPressed += LevelChange;
 
     }
 
@@ -35,11 +34,6 @@ public class GridManager : MonoBehaviour
         GameManager.instance.OnLevelChangeBtnPressed += LevelChange;
         GameManager.instance.OnRestartBtnPressed += Restart;
     }
-
-    /*private void OnEnable()
-    {
-        GameManager.instance.OnLevelChangeBtnPressed += LevelChange;
-    }*/
 
     private void OnDisable()
     {
