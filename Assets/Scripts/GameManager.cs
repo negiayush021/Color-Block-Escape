@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
         Application.targetFrameRate = 60;
         QualitySettings.vSyncCount = 0;
         instance = this;
+
+        currentLevel = PlayerPrefs.GetInt("Open Level") - 1;
     }
 
     public Transform cameraTransform;
@@ -32,6 +34,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] Designs;
     private void Start()
     {
+        
         StartCoroutine(startingTheGame());
         foreach(GameObject design in Designs)
         {
