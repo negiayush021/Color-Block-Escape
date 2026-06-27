@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
     public LevelData[] leveldata;
     public int currentLevel;
 
+
     [Header("Pages")]
 
     [SerializeField] private GameObject settingsPage;

@@ -33,6 +33,10 @@ public class LevelManager : MonoBehaviour
     public int MovesRemaining { get; private set; }
     public int BlocksRemaining;
 
+
+    [SerializeField] private TextMeshProUGUI moves_used;
+    [SerializeField] private TextMeshProUGUI moves_left;
+
     private void Awake()
     {
         Instance = this;
@@ -50,6 +54,9 @@ public class LevelManager : MonoBehaviour
         Level_number_Text.text = "Level " + Level_number.ToString();
 
         UIManager.Instance.UpdateMovesUI(MovesRemaining);
+
+        moves_left.gameObject.SetActive(false);
+        moves_used.gameObject.SetActive(false);
     }
 
     private void OnEnable()
@@ -98,6 +105,7 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator showing()
     {
+
         Remaining_Moves_Of_Active_Level = MovesRemaining;
         Toatl_Moves_Of_Active_Level = currentLevel.moveLimit;
 
@@ -144,6 +152,10 @@ public class LevelManager : MonoBehaviour
                 count++;
             }
         }
+        moves_left.gameObject.SetActive(true);
+        moves_used.gameObject.SetActive(true);
+        moves_left.text = "Moves left : " + MovesRemaining.ToString();
+        moves_used.text = "Moves used : " + (currentLevel.moveLimit - MovesRemaining).ToString();
 
         yield return new WaitForSeconds(1f);
 
