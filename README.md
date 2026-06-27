@@ -223,7 +223,9 @@ Gameplay Demonstration:
 
 # Release
 
-The latest Android APK is available in the GitHub Releases section.
+[![Download APK](https://img.shields.io/badge/Download-APK-brightgreen)](https://github.com/negiayush021/Color-Block-Escape/releases/download/v1.0.0/Color.Block.Escape.apk)
+
+Direct download: [Color.Block.Escape.apk](https://github.com/negiayush021/Color-Block-Escape/releases/download/v1.0.0/Color.Block.Escape.apk)
 
 ---
 
