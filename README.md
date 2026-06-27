@@ -196,20 +196,22 @@ Assets
 # Screenshots
 
 ### Main Menu
-
-(Add Screenshot Here)
+![Main Menu](Screenshots/main-menu.png)
 
 ### Gameplay
-
-(Add Screenshot Here)
+![Gameplay](Screenshots/gameplay1.png)
 
 ### Hammer Power-Up
-
-(Add Screenshot Here)
+![Hammer Power-Up](Screenshots/hammer-power.png)
 
 ### Level Complete
+![Level Complete](Screenshots/level-complete.png)
 
-(Add Screenshot Here)
+### Settings Page
+![Settings Page](Screenshots/settings-page.png)
+
+### Home Page
+![Home Page](Screenshots/home-page.png)
 
 ---
 
