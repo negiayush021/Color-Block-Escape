@@ -219,7 +219,7 @@ Assets
 
 Gameplay Demonstration:
 
-(Add Video Link Here)
+[![Gameplay Video](![alt text](image.png))](https://youtube.com/shorts/pg7J7zzkHeU?feature=share)
 
 ---
 
