@@ -1,6 +1,6 @@
 # Color Block Escape
 
-A grid-based mobile puzzle game developed in Unity where user guide colored blocks to their matching exit gates using swipe controls while overcoming obstacles and managing limited moves.
+A grid-based mobile puzzle game developed in Unity where players guide colored blocks to their matching exit gates using swipe controls while overcoming obstacles and managing limited moves.
 
 ---
 
@@ -50,7 +50,7 @@ Players must move colored blocks through the grid and successfully guide them to
 
 # System Architecture
 
-![System Architecture](Docs/ArchitectureDiagram.png)
+![System Architecture](Docs/system-architecture-map.png)
 
 ### Architecture Overview
 
@@ -116,7 +116,7 @@ GameManager
 
 # Functional Flow Diagram
 
-![Functional Flow](Docs/FunctionalFlowDiagram.png)
+![Functional Flow](Docs/functional-flow-diagram.png)
 
 ### Gameplay Flow
 
@@ -246,7 +246,7 @@ This project was developed with a focus on:
 
 **Ayush Negi**
 
-Unity Game Developer
+Game Developer
 
 GitHub:
 https://github.com/negiayush021
