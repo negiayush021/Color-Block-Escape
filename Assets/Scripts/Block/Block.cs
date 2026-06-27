@@ -91,6 +91,7 @@ public class Block : MonoBehaviour
     {
         if (cell.ExitColor == blockData.blockColor)
         {
+            gameObject.GetComponent<Collider>().enabled = false;
             cell.isOccupied = false;
             Debug.Log("Block Escaped");
             cell.gateReference.OpenGate();

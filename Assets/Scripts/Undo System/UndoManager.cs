@@ -82,7 +82,7 @@ public class UndoManager : MonoBehaviour
 
             blockState.block.GridPosition = blockState.position;
             blockState.block.gameObject.SetActive(blockState.isActive);
-
+            blockState.block.gameObject.GetComponent<Collider>().enabled = true;
             
             if (wasInactive && willBeActive && blockState.block.tag != "Obstacle")
             {
